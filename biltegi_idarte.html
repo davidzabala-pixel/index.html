@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="eu">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ikusentzunezko Hizkuntza eta Teknologia Biltegia — IDarte</title>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: 'Segoe UI', Arial, sans-serif; background: #f5f4f0; color: #2c2c2a; line-height: 1.6; }
+
+  header { background: #1a1a1a; color: #fff; padding: 2.5rem 2rem 2rem; }
+  header h1 { font-size: 1.6rem; font-weight: 500; margin-bottom: 0.3rem; }
+  header p { font-size: 0.95rem; color: #aaa; }
+  .lang-badges { margin-top: 0.8rem; display: flex; gap: 8px; flex-wrap: wrap; }
+  .lang-badge { font-size: 11px; padding: 3px 10px; border-radius: 20px; border: 1px solid #444; color: #ccc; }
+
+  nav { background: #fff; border-bottom: 1px solid #e0ddd5; padding: 0 2rem; display: flex; gap: 0; overflow-x: auto; }
+  nav a { display: block; padding: 1rem 1.1rem; font-size: 0.85rem; color: #666; text-decoration: none; white-space: nowrap; border-bottom: 2px solid transparent; transition: all 0.2s; }
+  nav a:hover, nav a.active { color: #1a1a1a; border-bottom-color: #1a1a1a; }
+
+  main { max-width: 960px; margin: 2rem auto; padding: 0 1.5rem; }
+
+  .category { margin-bottom: 2.5rem; }
+  .category-header { display: flex; align-items: center; gap: 10px; margin-bottom: 1rem; padding-bottom: 0.6rem; border-bottom: 1.5px solid #e0ddd5; }
+  .category-icon { width: 32px; height: 32px; border-radius: 8px; display: flex; align-items: center; justify-content: center; font-size: 16px; flex-shrink: 0; }
+  .category-title { font-size: 1.1rem; font-weight: 500; }
+  .category-count { font-size: 12px; color: #888; margin-left: auto; }
+
+  .resources { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 12px; }
+  .card { background: #fff; border: 0.5px solid #ddd; border-radius: 10px; padding: 1rem 1.1rem; text-decoration: none; color: inherit; display: block; transition: box-shadow 0.2s, border-color 0.2s; }
+  .card:hover { box-shadow: 0 2px 12px rgba(0,0,0,0.08); border-color: #bbb; }
+  .card-top { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 6px; }
+  .card-title { font-size: 0.95rem; font-weight: 500; color: #1a1a1a; line-height: 1.4; }
+  .card-lang { font-size: 11px; padding: 2px 8px; border-radius: 20px; background: #f0ede5; color: #666; flex-shrink: 0; margin-left: 8px; }
+  .card-desc { font-size: 0.82rem; color: #777; line-height: 1.5; margin-bottom: 8px; }
+  .card-url { font-size: 11px; color: #999; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+  .card-type { font-size: 11px; color: #888; margin-top: 6px; }
+  .type-dot { display: inline-block; width: 6px; height: 6px; border-radius: 50%; margin-right: 4px; vertical-align: middle; }
+
+  .intro-box { background: #fff; border: 0.5px solid #ddd; border-radius: 12px; padding: 1.5rem; margin-bottom: 2rem; }
+  .intro-box h2 { font-size: 1rem; font-weight: 500; margin-bottom: 0.5rem; }
+  .intro-box p { font-size: 0.88rem; color: #666; }
+  .intro-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(140px, 1fr)); gap: 8px; margin-top: 1rem; }
+  .intro-stat { background: #f5f4f0; border-radius: 8px; padding: 0.7rem 1rem; }
+  .intro-stat .num { font-size: 1.4rem; font-weight: 500; }
+  .intro-stat .label { font-size: 11px; color: #888; }
+
+  footer { text-align: center; padding: 2rem; font-size: 12px; color: #aaa; border-top: 1px solid #e0ddd5; margin-top: 2rem; }
+</style>
+</head>
+<body>
+
+<header>
+  <h1>Ikusentzunezko Hizkuntza eta Teknologia — Biltegi Digitala</h1>
+  <p>IDarte Euskadiko Arte Eskola · Argazkilaritza eta Bideo irakasgaiak</p>
+  <div class="lang-badges">
+    <span class="lang-badge">🇪🇺 Euskaraz</span>
+    <span class="lang-badge">🇪🇸 Gaztelaniaz</span>
+    <span class="lang-badge">🇬🇧 Ingelesez</span>
+  </div>
+</header>
+
+<nav>
+  <a href="#oinarriak" class="active">Oinarriak</a>
+  <a href="#editatzea">Editatzea</a>
+  <a href="#bideoa">Bideoa</a>
+  <a href="#historia">Historia</a>
+  <a href="#inspirazio">Inspirazio</a>
+</nav>
+
+<main>
+
+  <div class="intro-box">
+    <h2>Biltegi honi buruz</h2>
+    <p>Argazkilaritza eta bideo irakasgaietako baliabide digitalak toki bakarrean. Tutorialak, gidak eta erreferentziak — doakoak eta kalitate handikoak. Zure erritmoan ikasi.</p>
+    <div class="intro-grid">
+      <div class="intro-stat"><div class="num">7</div><div class="label">baliabide</div></div>
+      <div class="intro-stat"><div class="num">5</div><div class="label">kategoria</div></div>
+      <div class="intro-stat"><div class="num">3</div><div class="label">hizkuntza</div></div>
+      <div class="intro-stat"><div class="num">100%</div><div class="label">doako</div></div>
+    </div>
+  </div>
+
+  <!-- KATEGORIA 1 -->
+  <div class="category" id="oinarriak">
+    <div class="category-header">
+      <div class="category-icon" style="background:#E6F1FB;">📷</div>
+      <span class="category-title">Argazkilaritzaren oinarriak</span>
+      <span class="category-count">3 baliabide</span>
+    </div>
+    <div class="resources">
+
+      <a class="card" href="https://photographylife.com/photography-basics" target="_blank">
+        <div class="card-top">
+          <span class="card-title">Photography Basics — The Complete Beginner's Guide</span>
+          <span class="card-lang">EN</span>
+        </div>
+        <p class="card-desc">Argazkilaritzaren oinarri guztiak azaltzen dituen gida osoa: esposizioa, konposaketa, argia, kamera ezarpenak eta gehiago.</p>
+        <div class="card-url">photographylife.com</div>
+        <div class="card-type"><span class="type-dot" style="background:#378ADD;"></span>Gida · Doakoa</div>
+      </a>
+
+      <a class="card" href="https://capturetheatlas.com/es/conceptos-basicos-de-la-fotografia/" target="_blank">
+        <div class="card-top">
+          <span class="card-title">Conceptos básicos de la fotografía</span>
+          <span class="card-lang">ES</span>
+        </div>
+        <p class="card-desc">Exposizio-triangelua, ISO, apertura eta abiadura infografiekin azalduta. Hasiberrientzat oso egokia.</p>
+        <div class="card-url">capturetheatlas.com</div>
+        <div class="card-type"><span class="type-dot" style="background:#1D9E75;"></span>Artikulua + Infografiak · Doakoa</div>
+      </a>
+
+      <a class="card" href="https://mega.nz/file/4goVCYiC#rS_SLsPp9SvCi-rAnaQ-IBezR7BTGDuA1tu8zA5DwXM" target="_blank">
+        <div class="card-top">
+          <span class="card-title">Manual de Fotografía Digital — Gida osoa</span>
+          <span class="card-lang">ES</span>
+        </div>
+        <p class="card-desc">Argazkilaritzaren, kameraren eta argazki-edizioaren inguruko gida osoa PDF formatuan. Kamera motak, ekipamendua eta editatzea barne.</p>
+        <div class="card-url">mega.nz</div>
+        <div class="card-type"><span class="type-dot" style="background:#BA7517;"></span>PDF · Doakoa</div>
+      </a>
+
+    </div>
+  </div>
+
+  <!-- KATEGORIA 2 -->
+  <div class="category" id="editatzea">
+    <div class="category-header">
+      <div class="category-icon" style="background:#E1F5EE;">🎨</div>
+      <span class="category-title">Argazkiak editatzea</span>
+      <span class="category-count">1 baliabide</span>
+    </div>
+    <div class="resources">
+
+      <a class="card" href="https://www.adobe.com/es/learn/lightroom-cc?learnIn=1&locale=es" target="_blank">
+        <div class="card-top">
+          <span class="card-title">Adobe Lightroom — Tutorial ofiziala</span>
+          <span class="card-lang">ES</span>
+        </div>
+        <p class="card-desc">Lightroom erabiltzeko tutorial ofiziala Adoberen webgunetik. Argazkiak inportatu, editatu eta esportatzeko oinarrizko gida.</p>
+        <div class="card-url">adobe.com/es/learn/lightroom-cc</div>
+        <div class="card-type"><span class="type-dot" style="background:#378ADD;"></span>Tutorial ofiziala · Doakoa</div>
+      </a>
+
+    </div>
+  </div>
+
+  <!-- KATEGORIA 3 -->
+  <div class="category" id="bideoa">
+    <div class="category-header">
+      <div class="category-icon" style="background:#FAEEDA;">🎬</div>
+      <span class="category-title">Bideo-ekoizpena eta editatzea</span>
+      <span class="category-count">1 baliabide</span>
+    </div>
+    <div class="resources">
+
+      <a class="card" href="https://www.blackmagicdesign.com/products/davinciresolve/training" target="_blank">
+        <div class="card-top">
+          <span class="card-title">DaVinci Resolve — Tutorial ofizialak</span>
+          <span class="card-lang">EN</span>
+        </div>
+        <p class="card-desc">Blackmagic Design-en tutorial ofizialak DaVinci Resolve bideo-edizio programa ikasteko. Hasieratik aurreratuenera arte, doakoa.</p>
+        <div class="card-url">blackmagicdesign.com</div>
+        <div class="card-type"><span class="type-dot" style="background:#1D9E75;"></span>Bideo-tutorialak · Doakoa</div>
+      </a>
+
+    </div>
+  </div>
+
+  <!-- KATEGORIA 4 -->
+  <div class="category" id="historia">
+    <div class="category-header">
+      <div class="category-icon" style="background:#EEEDFE;">🏛️</div>
+      <span class="category-title">Argazkilaritzaren historia</span>
+      <span class="category-count">1 baliabide</span>
+    </div>
+    <div class="resources">
+
+      <a class="card" href="https://www.rtve.es/play/videos/la-mirada-fotografica/" target="_blank">
+        <div class="card-top">
+          <span class="card-title">La Mirada Fotográfica — RTVE</span>
+          <span class="card-lang">ES</span>
+        </div>
+        <p class="card-desc">RTVEren dokumentala argazkilaritzaren historiari buruz. Kalitate handiko edukia, argazkilari handiak eta mugimendu garrantzitsuak aztertzen ditu.</p>
+        <div class="card-url">rtve.es</div>
+        <div class="card-type"><span class="type-dot" style="background:#D4537E;"></span>Dokumentala · Doakoa</div>
+      </a>
+
+    </div>
+  </div>
+
+  <!-- KATEGORIA 5 -->
+  <div class="category" id="inspirazio">
+    <div class="category-header">
+      <div class="category-icon" style="background:#FAECE7;">✨</div>
+      <span class="category-title">Inspirazio eta erreferentzia</span>
+      <span class="category-count">1 baliabide</span>
+    </div>
+    <div class="resources">
+
+      <a class="card" href="https://filmvibes.io/" target="_blank">
+        <div class="card-top">
+          <span class="card-title">FilmVibes — Ikus-entzunezko erreferentzia sistema</span>
+          <span class="card-lang">EN</span>
+        </div>
+        <p class="card-desc">Filmetako argazkilaritza eta koloreak aztertzeko tresna azkarra eta doakoa. Ikus-entzunezko estiloak eta erreferentziak bilatzeko ezin hobea.</p>
+        <div class="card-url">filmvibes.io</div>
+        <div class="card-type"><span class="type-dot" style="background:#639922;"></span>Tresna interaktiboa · Doakoa</div>
+      </a>
+
+    </div>
+  </div>
+
+</main>
+
+<footer>
+  IDarte Euskadiko Arte Eskola · Biltegi hau aldizka eguneratzen da · Galderarik? Jarri harremanetan irakasleekin
+</footer>
+
+</body>
+</html>
